@@ -2,10 +2,6 @@
 
 A personal portfolio showcasing my professional journey, technical expertise, and notable projects. This portfolio highlights my experience as a **Senior Software Engineer** specializing in **Android, iOS, Kotlin Multiplatform (KMM), BLE/Wi-Fi connectivity, IoT, and cross-platform mobile development**.
 
-## Demo
-
-[Live Portfolio Link](#) <!-- Replace with your deployed website URL -->
-
 ## Features
 
 - **Dynamic Project Sections** – Projects are loaded modularly for better scalability.
@@ -48,5 +44,5 @@ git clone https://github.com/gaganbelgur/gaganbelgur-portfolio.git
 2. Open index.html in your favorite browser. 
    Ensure your browser allows local fetch requests or use a local server like Live Server for proper loading of modular sections.
 
-License
+## License
 This project is personal portfolio and is open for viewing. © 2025 Gagan Belgur
