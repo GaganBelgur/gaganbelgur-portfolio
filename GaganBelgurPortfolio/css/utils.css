@@ -1,0 +1,36 @@
+/* Back to top */
+#backToTop {
+    position: fixed;
+    right: 16px;
+    bottom: 16px;
+    z-index: 9999;
+    display: none;
+    border: none;
+    border-radius: 30px;
+    padding: 10px 14px;
+    background: var(--brand-blue);
+    color: #fff;
+    font-weight: 700;
+    box-shadow: 0 8px 18px rgba(13, 110, 253, .35);
+}
+
+#backToTop:hover {
+    background: #0b5ed7;
+}
+
+/* Helpers */
+.muted { color: #6c757d; }
+
+.social-icons { margin-top: 20px; }
+
+.social-icon {
+    font-size: 24px;
+    margin: 0 10px;
+    color: white;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-icon:hover {
+    color: #007bff;
+    transform: scale(1.2);
+}

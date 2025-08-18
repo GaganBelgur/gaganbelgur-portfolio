@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <title>Gagan Belgur | Portfolio</title>
+
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- AOS Animation CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- Linking the CSS file -->
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg bg-white border-bottom sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">Gagan Belgur</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav"
+                aria-controls="nav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div id="nav" class="collapse navbar-collapse">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#responsibilities">Responsibilities</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                    <li class="nav-item ms-lg-2"><a class="btn btn-primary btn-sm" href="Gagan_Belgur_Resume.pdf"
+                            download>Download
+                            Resume</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <header class="hero">
+        <div class="container">
+            <img class="avatar" src="images/placeholder.jpg" alt="Your photo" />
+            <h1>Senior Software Engineer</h1>
+            <h3>Mobile Application Developer</h3>
+            <p class="lead">9+ years | 20 + Native Apps</p>
+            <!-- <p> Android [Kotlin/Java], iOS, KMM</p>
+            <p> BLE, Wi-Fi, IoT, Healthcare & Finance</p> -->
+            <!-- <div class="d-flex gap-2 justify-content-center mt-2">
+                <a href="#projects" class="btn btn-accent">View Projects</a>
+                <a href="#contact" class="btn btn-light fw-bold">Contact</a>
+            </div>
+            <div class="social-icons mt-4">
+                <a class="social-icon" href="https://www.linkedin.com/in/gaganbelgur"><i
+                        class="fab fa-linkedin-in"></i></a>
+                <a class="social-icon" href="https://www.github.com/gaganbelgur"><i class="fab fa-github"></i></a>
+            </div> -->
+        </div>
+    </header>
+
+
+    <!-- ABOUT -->
+    <section id="about" class="section">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-right">About</h2>
+            <p class="mb-0" data-aos="fade-up">
+                Mobile application developer with deep experience across Android, BLE/Wi-Fi connectivity, and
+                IoT.
+                Delivered production apps for Philips (medical devices), Citi (banking), Molekule (air
+                purifiers), Samsung (keyboard features),
+                and large-scale assessment platforms. Strong focus on feature ownership, API integration,
+                performance optimization,
+                and clean architecture (MVVM / KMM). Comfortable collaborating across product, design, and hardware
+                teams.
+            </p>
+        </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="section ">
+        <div class="container">
+
+            <h2 class="section-title" data-aos="fade-right">Projects</h2>
+
+            <!-- Filter Buttons -->
+            <div class="filter-btns mb-3">
+                <button class="btn btn-sm active" data-filter="all">All</button>
+                <button class="btn btn-sm" data-filter="philips">Philips</button>
+                <button class="btn btn-sm" data-filter="citi">Citi</button>
+                <button class="btn btn-sm" data-filter="molekule">Molekule</button>
+                <button class="btn btn-sm" data-filter="samsung">Samsung</button>
+                <button class="btn btn-sm" data-filter="navriti">Navriti</button>
+                <button class="btn btn-sm" data-filter="hobby">Hobby</button>
+                <button class="btn btn-sm" data-filter="sdk">SDK/Library</button>
+            </div>
+
+            <div class="row g-4" id="projectGrid">
+
+                <!-- PHILIPS -->
+                <div class="col-md-6 col-lg-4 project" data-tags="philips ble iot sdk">
+                    <div class="card project-card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">System Test App</h5>
+                            <p class="card-text">
+                                Demo app for Connectivity SDK validation. Features BLE device pairing, RSSI
+                                reading, background sync,
+                                port properties read/write, subscriptions, and continuous fetch.
+                            </p>
+                            <span class="badge badge-tag">BLE</span>
+                            <span class="badge badge-tag">Testing</span>
+                            <span class="badge badge-tag badge-orange">Philips</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4 project" data-tags="philips ble iot">
+                    <div class="card project-card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">Odin</h5>
+                            <p class="card-text">
+                                Mobile app to connect Philips medical BLE devices (Thermometer, BP Meter, Weighing
+                                Scale, Pulse Oximeter)
+                                and work with the 2Net Hub for broad healthcare workflows.
+                            </p>
+                            <span class="badge badge-tag">BLE</span>
+                            <span class="badge badge-tag">Medical</span>
+                            <span class="badge badge-tag badge-orange">Philips</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4 project" data-tags="philips sdk ble wifi">
+                    <div class="card project-card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">Connectivity SDK</h5>
+                            <p class="card-text">
+                                Cross-platform BLE & Wi-Fi library for Android and iOS providing robust
+                                primitives and advanced features to power multiple propositions.
+                            </p>
+                            <span class="badge badge-tag">SDK</span>
+                            <span class="badge badge-tag">BLE</span>
+                            <span class="badge badge-tag">Wi-Fi</span>
+                            <span class="badge badge-tag badge-orange">Philips</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CITI -->
+                <div class="col-md-6 col-lg-4 project" data-tags="citi finance banking">
+                    <div class="card project-card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">Citi Bank Mobile</h5>
+                            <p class="card-text">
+                                Banking app for fund transfers, statements (download/view), and credit card &
+                                account management.
+                                Released across multiple markets with compliance and performance focus.
+                            </p>
+                            <span class="badge badge-tag">Finance</span>
+                            <span class="badge badge-tag">Security</span>
+                            <span class="badge badge-tag badge-orange">Citi</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- MOLEKULE -->
+                <div class="col-md-6 col-lg-4 project" data-tags="molekule iot b2b">
+                    <div class="card project-card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">Molekule B2B</h5>
+                            <p class="card-text">
+                                B2B app for organizations to group and manage multiple purifiers; control by type
+                                (speed, mode, filter status) and reorder devices within groups.
+                            </p>
+                            <span class="badge badge-tag">IoT</span>
+                            <span class="badge badge-tag">B2B</span>
+                            <span class="badge badge-tag badge-orange">Molekule</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4 project" data-tags="molekule iot consumer mqtt">
+                    <div class="card project-card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">Molekule Consumer</h5>
+                            <p class="card-text">
+                                IoT app to onboard Molekule Air Purifiers, control fan speeds/modes, view particle
+                                levels, and stream real-time data via MQTT.
+                                Includes historical charts and smooth animations.
+                            </p>
+                            <span class="badge badge-tag">IoT</span>
+                            <span class="badge badge-tag">MQTT</span>
+                            <span class="badge badge-tag badge-orange">Molekule</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4 project" data-tags="molekule iot analytics">
+                    <div class="card project-card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">Molekule IAQ</h5>
+                            <p class="card-text">
+                                Indoor Air Quality app with rich graphs for CO₂, Chemicals, Humidity,
+                                Coarse/Fine/Microfine particles and daily/weekly/yearly insights.
+                            </p>
+                            <span class="badge badge-tag">Analytics</span>
+                            <span class="badge badge-tag">IoT</span>
+                            <span class="badge badge-tag badge-orange">Molekule</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SAMSUNG -->
+                <div class="col-md-6 col-lg-4 project" data-tags="samsung keyboard ux">
+                    <div class="card project-card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">Samsung Keyboard – Cursor Control</h5>
+                            <p class="card-text">
+                                Honey Board feature enabling precise cursor movement via swipe gestures to improve text
+                                editing UX.
+                            </p>
+                            <span class="badge badge-tag">Keyboard</span>
+                            <span class="badge badge-tag">UX</span>
+                            <span class="badge badge-tag badge-orange">Samsung</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4 project" data-tags="samsung keyboard stickers avatar">
+                    <div class="card project-card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">Samsung Keyboard – Emotify</h5>
+                            <p class="card-text">
+                                Sticker platform offering default and customized avatar stickers. Users select
+                                gender and customize with predefined accessories.
+                            </p>
+                            <span class="badge badge-tag">Stickers</span>
+                            <span class="badge badge-tag">Avatar</span>
+                            <span class="badge badge-tag badge-orange">Samsung</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- NAVRITI – Assessment Platforms -->
+                <div class="col-md-6 col-lg-4 project" data-tags="navriti edtech assessment">
+                    <div class="card project-card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">UAP – Unified Assessment Platform</h5>
+                            <p class="card-text">
+                                End-to-end exam platform for theory & practical with batching, paper download, offline
+                                mode, and facilitator-led practicals.
+                            </p>
+                            <span class="badge badge-tag">EdTech</span>
+                            <span class="badge badge-tag">Offline</span>
+                            <span class="badge badge-tag badge-orange">Navriti</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4 project" data-tags="navriti edtech video">
+                    <div class="card project-card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">CII Skills</h5>
+                            <p class="card-text">
+                                Video assessment app integrating with Certiplate for paper/schedule downloads,
+                                offline assessments, and real-time sync for evaluation.
+                            </p>
+                            <span class="badge badge-tag">Video</span>
+                            <span class="badge badge-tag">EdTech</span>
+                            <span class="badge badge-tag badge-orange">Navriti</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4 project" data-tags="navriti edtech assessment offline">
+                    <div class="card project-card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">Career Map</h5>
+                            <p class="card-text">
+                                Assessment interface supporting online/offline, multilingual selection, timers, and
+                                auto-submit on time-out.
+                            </p>
+                            <span class="badge badge-tag">Assessment</span>
+                            <span class="badge badge-tag">Offline</span>
+                            <span class="badge badge-tag badge-orange">Navriti</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4 project" data-tags="navriti audit">
+                    <div class="card project-card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">ESCII – Centre Audit</h5>
+                            <p class="card-text">
+                                Audit tool for the electronics sector with role-based views, inspection flows, and
+                                data projections for auditors/chief assessors.
+                            </p>
+                            <span class="badge badge-tag">Audit</span>
+                            <span class="badge badge-tag">Analytics</span>
+                            <span class="badge badge-tag badge-orange">Navriti</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4 project" data-tags="navriti audit">
+                    <div class="card project-card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">UAP – Centre Audit</h5>
+                            <p class="card-text">
+                                In-house Android app to audit assessment centers, evaluate infrastructure, and verify
+                                standards for examinations.
+                            </p>
+                            <span class="badge badge-tag">Audit</span>
+                            <span class="badge badge-tag">Android</span>
+                            <span class="badge badge-tag badge-orange">Navriti</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4 project" data-tags="navriti logistics tracking forms">
+                    <div class="card project-card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">FMA – Facilitator Monitoring</h5>
+                            <p class="card-text">
+                                Tracks facilitators and assessment stages with geo-tagged photos, forms, and status
+                                updates for scheduled batches.
+                            </p>
+                            <span class="badge badge-tag">Tracking</span>
+                            <span class="badge badge-tag">Geo</span>
+                            <span class="badge badge-tag badge-orange">Navriti</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4 project" data-tags="navriti logistics reimbursement">
+                    <div class="card project-card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">AMA – Assessor Monitoring</h5>
+                            <p class="card-text">
+                                Assessor app to view scheduled assessments, locations, and manage reimbursements.
+                            </p>
+                            <span class="badge badge-tag">Logistics</span>
+                            <span class="badge badge-tag">Reimbursements</span>
+                            <span class="badge badge-tag badge-orange">Navriti</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4 project" data-tags="navriti jobs careers">
+                    <div class="card project-card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">PRAMAAN JOBS</h5>
+                            <p class="card-text">
+                                Job opportunities, job-fair info, training programs, tutorials, and counseling for
+                                candidates.
+                            </p>
+                            <span class="badge badge-tag">Careers</span>
+                            <span class="badge badge-tag">Jobs</span>
+                            <span class="badge badge-tag badge-orange">Navriti</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- HOBBY -->
+                <div class="col-md-6 col-lg-4 project" data-tags="hobby utility">
+                    <div class="card project-card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">Digital Sports Stopwatch</h5>
+                            <p class="card-text">
+                                Sports stopwatch with fast/slow lap, start/stop, and millisecond precision.
+                            </p>
+                            <span class="badge badge-tag">Utility</span>
+                            <span class="badge badge-tag badge-orange">Hobby</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div> <!-- /row -->
+        </div>
+    </section>
+
+
+    <main>
+        <div id="work-experience"></div>
+    </main>
+
+    <!-- RESPONSIBILITIES -->
+    <section id="responsibilities" class="section ">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-right">Responsibilities</h2>
+            <ul class="tick-list" data-aos="fade-up">
+                <li>Designed and implemented end-to-end mobile applications; enhanced existing apps with scalable
+                    architectures.</li>
+                <li>Led feature development: requirements analysis, solution design, implementation, and rollout.</li>
+                <li>Shared knowledge via tech talks, product demos, and client presentations.</li>
+                <li>Active in Scrum ceremonies (stand-ups, retrospectives, estimations); drove continuous improvement.
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Technical Skills -->
+    <section id="skills" class="section ">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-right">Technical Skills</h2>
+            <ul class="list-group list-group-flush" data-aos="fade-up">
+                <li class="list-group-item"><strong>Android:</strong> Activities, Fragments, Services, Broadcast
+                    Receivers,
+                    AIDL...
+                </li>
+                <li class="list-group-item"><strong>Jetpack Components:</strong> Data Binding, View Binding, View
+                    Models...
+                </li>
+                <li class="list-group-item"><strong>Architecture:</strong> MVC, MVP, MVVM, Clean Architecture, SOLID
+                    Principles
+                </li>
+                <li class="list-group-item"><strong>Domain Experience:</strong> Education, IoT, Health Care, Banking
+                </li>
+                <li class="list-group-item"><strong>Design Patterns:</strong> Singleton, Builder, Factory, Decorator
+                </li>
+                <li class="list-group-item"><strong>User Interface:</strong> Material Design, Constraint Layout, Jetpack
+                    Compose
+                </li>
+                <li class="list-group-item"><strong>Protocols:</strong> HTTP, MQTT, Web Sockets, AWS, Matter, Thread
+                </li>
+                <li class="list-group-item"><strong>Tools:</strong> Android Studio, Zeplin, Jira, XCode...</li>
+                <li class="list-group-item"><strong>Version Control:</strong> Git, SVN, BitBucket, Perforce</li>
+                <li class="list-group-item"><strong>Test Frameworks:</strong> JUnit, Mockito, Robo Electric</li>
+                <li class="list-group-item"><strong>Database:</strong> SQLite, Room</li>
+                <li class="list-group-item"><strong>Parsing:</strong> JSON, XML, Swagger, YAML</li>
+                <li class="list-group-item"><strong>Push Notification:</strong> Iterable, Firebase</li>
+                <li class="list-group-item"><strong>Dependency Injection:</strong> Dagger2, Hilt</li>
+                <li class="list-group-item"><strong>Libraries:</strong> Retrofit, RxJava, MPDF Kit, Volley, Glide,
+                    Picasso
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- STRENGTHS -->
+    <section id="strengths" class="section ">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-right">Personal Strengths</h2>
+            <ul class="tick-list" data-aos="fade-up">
+                <li>Ability to lead teams and drive logical, pragmatic solutions.</li>
+                <li>Flexible, adaptable, honest, with a strong work ethic.</li>
+                <li>Excellent oral/written communication and organizational skills.</li>
+                <li>Quick learner and collaborative team player; helps boost teammates.</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Education -->
+    <section id="education" class="section">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-right">Education</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <h5 class="mb-1">BE, Information Science & Engineering</h5>
+                    <p class="mb-0"><strong>Jawaharlal National College of Engineering</strong></p>
+                    <p class="mb-0"><strong>Shimoga </strong></p>
+                    <small class="text-muted">2011 – 2015</small>
+                </div>
+                <hr>
+                <div class="timeline-item">
+                    <h5 class="mb-1">Pre-University</h5>
+                    <p class="mb-0"><strong>Sri Vidhya Bharathi Education Trust</strong></p>
+                    <p class="mb-0"><strong>Shimoga </strong></p>
+                    <small class="text-muted">2011</small>
+                </div>
+                <hr>
+                <div class="timeline-item">
+                    <h5 class="mb-1">SSLC</h5>
+                    <p class="mb-0"><strong>Deesheya Vidhya Samasthe</strong></p>
+                    <p class="mb-0"><strong>Shimoga </strong></p>
+                    <small class="text-muted">2009</small>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Achievements -->
+    <section id="achievements" class="section ">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-right">Achievements</h2>
+            <ul data-aos="fade-up">
+                <li>Employee of the Month, June 2018</li>
+                <li>"STAR TEAM - MOLEKULE" award at organization level</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Soft Skills -->
+    <section id="skills-progress" class="section ">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-right">Soft Skill</h2>
+
+            <div class="mb-4">
+                <span class="skill-name">Team Work</span>
+                <div class="rating-block">
+                    <span class="filled"></span>
+                    <span class="filled"></span>
+                    <span class="filled"></span>
+                    <span class="filled"></span>
+                    <span></span>
+                </div>
+            </div>
+
+            <div class="mb-4">
+                <span class="skill-name">Problem Solving</span>
+                <div class="rating-block">
+                    <span class="filled"></span>
+                    <span class="filled"></span>
+                    <span class="filled"></span>
+                    <span class="filled"></span>
+                    <span></span>
+                </div>
+            </div>
+
+            <div class="mb-4">
+                <span class="skill-name">Communication</span>
+                <div class="rating-block">
+                    <span class="filled"></span>
+                    <span class="filled"></span>
+                    <span class="filled"></span>
+                    <span class="filled"></span>
+                    <span></span>
+                </div>
+            </div>
+
+            <div class="mb-4">
+                <span class="skill-name">Adaptability</span>
+                <div class="rating-block">
+                    <span class="filled"></span>
+                    <span class="filled"></span>
+                    <span class="filled"></span>
+                    <span class="filled"></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Languages -->
+    <section id="languages" class="section">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-right">Languages</h2>
+
+            <div class="mb-4">
+                <span class="skill-name">English</span>
+                <div class="rating-block">
+                    <span class="filled"></span>
+                    <span class="filled"></span>
+                    <span class="filled"></span>
+                    <span class="filled"></span>
+                    <span></span>
+                </div>
+                <small>Upper Intermediate</small>
+            </div>
+
+            <div class="mb-4">
+                <span class="skill-name">Kannada</span>
+                <div class="rating-block">
+                    <span class="filled"></span>
+                    <span class="filled"></span>
+                    <span class="filled"></span>
+                    <span class="filled"></span>
+                    <span class="filled"></span>
+                </div>
+                <small>Proficient</small>
+            </div>
+
+            <div class="mb-4">
+                <span class="skill-name">Hindi</span>
+                <div class="rating-block">
+                    <span class="filled"></span>
+                    <span class="filled"></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <small>Basic</small>
+            </div>
+
+            <div class="mb-4">
+                <span class="skill-name">Telugu</span>
+                <div class="rating-block">
+                    <span class="filled"></span>
+                    <span class="filled"></span>
+                    <span class="filled"></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <small>Intermediate</small>
+            </div>
+        </div>
+    </section>
+
+    <!--
+<section id="contact" class="section">
+    <div class="container">
+        <h2 class="section-title">Contact</h2>
+        <div class="row g-3 align-items-center">
+
+            <div class="col-lg-5">
+                <div class="p-3 border rounded-3">
+                    <form onsubmit="event.preventDefault(); alert('Thanks! You can wire this form to email or a backend later.');">
+                        <div class="mb-2">
+                            <label class="form-label">Name</label>
+                            <input class="form-control" type="text" required/>
+                        </div>
+                        <div class="mb-2">
+                            <label class="form-label">Email</label>
+                            <input class="form-control" type="email" required/>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Message</label>
+                            <textarea class="form-control" rows="4" required></textarea>
+                        </div>
+                        <button class="btn btn-primary w-100" type="submit">Send</button>
+                        <div class="form-text mt-2">Tip: connect this to Formspree, Google Apps Script, or a simple
+                            backend later.
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>-->
+
+    <!-- Back to top -->
+    <button id="backToTop" aria-label="Back to top">↑</button>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/loader.js"></script>
+    <script src="js/filter.js"></script>
+    <script src="js/backToTop.js"></script>
+    <script src="js/aos-init.js"></script>
+</body>
+
+<footer>
+    <p>&copy; 2025 Gagan Belgur. All Rights Reserved.</p>
+</footer>
+
+</html>

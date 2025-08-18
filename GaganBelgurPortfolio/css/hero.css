@@ -1,0 +1,46 @@
+.hero {
+    background: linear-gradient(135deg, var(--brand-blue), var(--brand-orange));
+    color: #fff;
+    padding: 90px 0 70px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(closest-side at 20% 10%, rgba(255, 255, 255, .15), transparent 60%),
+                radial-gradient(closest-side at 80% 90%, rgba(255, 255, 255, .12), transparent 60%);
+}
+
+.hero .avatar {
+    width: 160px;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 80%;
+    border: 4px solid #fff;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, .2);
+}
+
+.hero h1 {
+    font-weight: 800;
+    margin-top: 16px;
+}
+
+.hero .lead {
+    opacity: .95;
+}
+
+.btn-accent {
+    background: var(--brand-orange);
+    color: #fff;
+    border: none;
+    font-weight: 700;
+}
+
+.btn-accent:hover {
+    background: #e26e0b;
+    color: #fff;
+}

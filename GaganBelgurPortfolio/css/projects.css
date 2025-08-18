@@ -1,0 +1,37 @@
+/* Project filter buttons */
+.filter-btns .btn {
+    border: 1px solid var(--brand-blue);
+    color: var(--brand-blue);
+    background: #fff;
+    margin: 6px;
+    font-weight: 600;
+}
+
+.filter-btns .btn.active,
+.filter-btns .btn:hover {
+    background: var(--brand-blue);
+    color: #fff;
+}
+
+/* Cards */
+.project-card {
+    border: 1px solid #eaeaea;
+    transition: transform .25s ease, box-shadow .25s ease;
+    height: 100%;
+}
+
+.project-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 24px rgba(0, 0, 0, .08);
+}
+
+.badge-tag {
+    background: var(--brand-blue);
+    color: #fff;
+    margin-right: 6px;
+    margin-bottom: 6px;
+}
+
+.badge-orange {
+    background: var(--brand-orange);
+}
