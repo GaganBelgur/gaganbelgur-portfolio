@@ -43,9 +43,10 @@ A personal portfolio showcasing my professional journey, technical expertise, an
 
 ```bash
 git clone https://github.com/gaganbelgur/gaganbelgur-portfolio.git
-Open index.html in your favorite browser.
 ```
-Ensure your browser allows local fetch requests or use a local server like Live Server for proper loading of modular sections.
+
+2. Open index.html in your favorite browser. 
+   Ensure your browser allows local fetch requests or use a local server like Live Server for proper loading of modular sections.
 
 License
 This project is personal portfolio and is open for viewing. © 2025 Gagan Belgur
