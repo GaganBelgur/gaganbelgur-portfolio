@@ -1,18 +1,120 @@
-// loader.js
-document.addEventListener("DOMContentLoaded", () => {
-  // Load the main workexperience.html
-  fetch("sections/workexperience.html")   // adjust path if needed
-    .then(res => {
-      if (!res.ok) throw new Error(`Failed to load workexperience.html`);
-      return res.text();
-    })
-    .then(html => {
-      document.getElementById("work-experience").innerHTML = html;
+// document.addEventListener("DOMContentLoaded", () => {
+//   const lazySections = document.querySelectorAll(".lazy-section");
 
-      // After injecting workexperience.html, dynamically load workexperience.js
-      const script = document.createElement("script");
-      script.src = "js/workexperience.js";  // adjust path if needed
-      document.body.appendChild(script);
-    })
-    .catch(err => console.error(err));
+//   lazySections.forEach(section => {
+//     const src = section.getAttribute("data-src");
+
+//     // Load navbar immediately
+//     if (section.id === "navbar" && src) {
+//       fetch(src)
+//         .then(res => res.text())
+//         .then(data => {
+//           section.innerHTML = data;
+//           section.classList.add("fade-in"); // fade effect
+//         })
+//         .catch(err => {
+//           section.innerHTML = `<p class="text-danger">Failed to load navbar</p>`;
+//           console.error("Navbar load error:", err);
+//         });
+//       return;
+//     }
+
+//     // Lazy load for other sections
+//     const observer = new IntersectionObserver((entries, obs) => {
+//       entries.forEach(entry => {
+//         if (entry.isIntersecting) {
+//           fetch(src)
+//             .then(res => res.text())
+//             .then(data => {
+//               section.innerHTML = data;
+//               section.classList.add("fade-in"); // fade effect
+//               obs.unobserve(section);
+//             })
+//             .catch(err => {
+//               section.innerHTML = `<p class="text-danger">Failed to load section</p>`;
+//               console.error("Section load error:", err);
+//             });
+//         }
+//       });
+//     }, { threshold: 0.2 });
+
+//     observer.observe(section);
+//   });
+// });
+document.addEventListener("DOMContentLoaded", () => {
+  const lazySections = document.querySelectorAll(".lazy-section");
+
+  lazySections.forEach(section => {
+    const src = section.getAttribute("data-src");
+
+    // Load navbar immediately
+    if (section.id === "navbar" && src) {
+      fetch(src)
+        .then(res => res.text())
+        .then(data => {
+          section.innerHTML = data;
+          section.classList.add("fade-in"); // fade effect
+        })
+        .catch(err => {
+          section.innerHTML = `<p class="text-danger">Failed to load navbar</p>`;
+          console.error("Navbar load error:", err);
+        });
+      return;
+    }
+
+    // Lazy load for other sections
+    const observer = new IntersectionObserver((entries, obs) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          fetch(src)
+            .then(res => res.text())
+            .then(data => {
+              section.innerHTML = data;
+              section.classList.add("fade-in"); // fade effect
+              obs.unobserve(section);
+
+              // ✅ Initialize filter only after projects section is loaded
+              if (section.id === "project") {
+                initProjectFilter();
+              }
+            })
+            .catch(err => {
+              section.innerHTML = `<p class="text-danger">Failed to load section</p>`;
+              console.error("Section load error:", err);
+            });
+        }
+      });
+    }, { threshold: 0.2 });
+
+    observer.observe(section);
+  });
 });
+
+// ✅ Move filter logic here so loader.js can call it
+function initProjectFilter() {
+  const buttons = document.querySelectorAll(".filter-btns .btn");
+  const cards = document.querySelectorAll("#projectGrid .project");
+
+  if (!buttons.length || !cards.length) {
+    console.warn("⚠️ Project filter not initialized: No buttons or cards found.");
+    return;
+  }
+
+  buttons.forEach(btn => {
+    btn.addEventListener("click", () => {
+      buttons.forEach(b => b.classList.remove("active"));
+      btn.classList.add("active");
+
+      const filter = btn.dataset.filter.toLowerCase();
+      cards.forEach(card => {
+        const tags = (card.dataset.tags || "").toLowerCase();
+        const match = filter === "all" || tags.includes(filter);
+        card.style.display = match ? "" : "none";
+      });
+    });
+  });
+
+  // ✅ Show all projects on first load
+  const defaultBtn = document.querySelector('.filter-btns .btn[data-filter="all"]');
+  if (defaultBtn) defaultBtn.click();
+}

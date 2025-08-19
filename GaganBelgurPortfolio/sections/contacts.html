@@ -1,0 +1,29 @@
+<div class="container">
+    <h2 class="section-title">Contact</h2>
+    <div class="row g-3 align-items-center">
+
+        <div class="col-lg-5">
+            <div class="p-3 border rounded-3">
+                <form
+                    onsubmit="event.preventDefault(); alert('Thanks! You can wire this form to email or a backend later.');">
+                    <div class="mb-2">
+                        <label class="form-label">Name</label>
+                        <input class="form-control" type="text" required />
+                    </div>
+                    <div class="mb-2">
+                        <label class="form-label">Email</label>
+                        <input class="form-control" type="email" required />
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Message</label>
+                        <textarea class="form-control" rows="4" required></textarea>
+                    </div>
+                    <button class="btn btn-primary w-100" type="submit">Send</button>
+                    <div class="form-text mt-2">Tip: connect this to Formspree, Google Apps Script, or a simple
+                        backend later.
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
