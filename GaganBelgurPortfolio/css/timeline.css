@@ -1,7 +1,7 @@
 /* Timeline Base */
 .timeline {
     position: relative;
-    margin: 40px 0;
+    margin: 2rem 0;
     padding-left: 40px;
     border-left: 3px solid #007bff; /* vertical line */
 }
@@ -11,21 +11,29 @@
     position: relative;
     margin-bottom: 40px;
     padding-left: 20px;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.timeline-item.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 /* Marker (dot) */
 .timeline-item::before {
     content: "";
     position: absolute;
-    left: -12px;
-    top: 5px;
+    left: -50px;
+    top: 0px;
     width: 20px;
     height: 20px;
-    background-color: #fff;
+    background: linear-gradient(135deg, #007BFF, #00C6FF);
     border: 3px solid #007bff;
     border-radius: 50%;
     box-shadow: 0 0 0 2px #007bff;
-    z-index: 1;
+    z-index: 2;
 }
 
 /* Content box */
