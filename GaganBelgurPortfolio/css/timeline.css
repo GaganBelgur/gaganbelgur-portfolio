@@ -1,12 +1,11 @@
-/* Timeline Base */
+
 .timeline {
     position: relative;
     margin: 2rem 0;
     padding-left: 40px;
-    border-left: 3px solid #007bff; /* vertical line */
+    border-left: 3px solid #007bff;
 }
 
-/* Each timeline item */
 .timeline-item {
     position: relative;
     margin-bottom: 40px;
@@ -21,7 +20,6 @@
   transform: translateY(0);
 }
 
-/* Marker (dot) */
 .timeline-item::before {
     content: "";
     position: absolute;
@@ -36,7 +34,6 @@
     z-index: 2;
 }
 
-/* Content box */
 .timeline-content {
     background: #f9f9f9;
     padding: 15px 20px;
@@ -80,7 +77,6 @@
     color: #444;
 }
 
-/* Loader (optional if you’re fetching dynamically) */
 .loader {
     text-align: center;
     padding: 20px;
@@ -105,7 +101,6 @@
     100% { transform: rotate(360deg); }
 }
 
-/* Responsive */
 @media (max-width: 768px) {
     .timeline {
         padding-left: 20px;
