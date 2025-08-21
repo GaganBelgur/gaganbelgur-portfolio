@@ -72,7 +72,11 @@ document.addEventListener("DOMContentLoaded", () => {
               section.innerHTML = data;
               section.classList.add("fade-in"); // fade effect
               obs.unobserve(section);
-
+              
+              // 🔥 tell the world that this section is ready
+              const event = new CustomEvent("sectionLoaded", { detail: section.id });
+              document.dispatchEvent(event);
+              
               // ✅ Initialize filter only after projects section is loaded
               if (section.id === "project") {
                 initProjectFilter();
