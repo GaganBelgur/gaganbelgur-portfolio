@@ -33,21 +33,21 @@
 .stat-inner {
   display: flex;
   flex-direction: row;
-  align-items: center;
+  align-items: stretch;
   width: 100%;
   gap: 10px;
 }
 
 /* Icon */
 .stat-icon {
-  font-size: 28px;
+  font-size: 40px;
   flex-shrink: 0;
 }
 
 /* Vertical divider */
 .stat-vertical-divider {
   width: 2px;
-  height: 60%;          /* height relative to card */
+  height: 100%;          /* height relative to card */
   background-color: #ccc;
 }
 
