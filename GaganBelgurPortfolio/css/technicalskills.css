@@ -20,6 +20,7 @@
   align-items: stretch; /* icon = full height */
   gap: 15px;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
+  border-right: 2px solid #eee;
 }
 
 .skill-card:hover {
@@ -51,4 +52,10 @@
 .skill-info small {
   color: #555;
   font-size: 0.9rem;
+}
+
+.skill-card h5 {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: normal;   /* remove bold */
 }

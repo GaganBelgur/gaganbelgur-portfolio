@@ -30,3 +30,7 @@
 .rating-block span.filled.animate {
   background-color: #007BFF; /* animate fill color */
 }
+
+.language-icon {
+  font-size: 2.5rem;   /* Bigger icon */
+}
