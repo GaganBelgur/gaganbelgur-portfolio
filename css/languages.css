@@ -1,0 +1,36 @@
+.horizontal-rating-block {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.horizontal-rating-block.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.rating-block {
+  display: flex;
+  gap: 5px;
+  margin: 5px 0;
+}
+
+.rating-block span {
+  width: 40px;
+  height: 20px;
+  background-color: #b7d7f7; /* empty */
+  display: inline-block;
+  transition: background-color 0.4s ease;
+}
+
+.rating-block span.filled {
+  background-color: #FF9800; /* default (unfilled) */
+}
+
+.rating-block span.filled.animate {
+  background-color: #007BFF; /* animate fill color */
+}
+
+.language-icon {
+  font-size: 2.5rem;   /* Bigger icon */
+}

@@ -1,0 +1,67 @@
+/* Back to top */
+#backToTop {
+  position: fixed;
+  right: 16px;
+  bottom: 16px;
+  z-index: 9999;
+  display: none;
+  border: none;
+  border-radius: 30px;
+  padding: 10px 14px;
+  background: var(--brand-blue);
+  color: #fff;
+  font-weight: 700;
+  box-shadow: 0 8px 18px rgba(13, 110, 253, .35);
+}
+
+#backToTop:hover {
+  background: #0b5ed7;
+}
+
+/* Helpers */
+.muted {
+  color: #6c757d;
+}
+
+.contact-card {
+  text-align: left;      /* align everything inside card to left */
+  padding: 20px;
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.social-icons {
+  display: flex;
+  justify-content: flex-start;  /* icons to the left */
+  gap: 15px;
+  margin-top: 20px;
+}
+.social-icon {
+  font-size: 1.5rem;
+  color: #007BFF; /* LinkedIn blue for demo */
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.social-icon:hover {
+  color: #333;
+}
+
+.lazy-section {
+  margin-bottom: 60px;
+  /* adjust as you like */
+}
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
