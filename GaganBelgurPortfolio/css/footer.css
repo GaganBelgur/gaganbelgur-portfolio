@@ -1,7 +1,12 @@
-footer {
-    background: #007BFF;
-    color: white;
-    padding: 28px;
+.site-footer {
+    background-color: #f8f8f8;
+    color: #000;               /* black text */
+    padding: 30px 20px;
     text-align: center;
-    border-top: 1px solid #eee;
-}    
+    font-size: 0.9rem;
+    border-top: 1px solid #ddd;
+}
+
+.site-footer p {
+    margin: 0 0 10px;
+}
