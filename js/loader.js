@@ -1,46 +1,3 @@
-// document.addEventListener("DOMContentLoaded", () => {
-//   const lazySections = document.querySelectorAll(".lazy-section");
-
-//   lazySections.forEach(section => {
-//     const src = section.getAttribute("data-src");
-
-//     // Load navbar immediately
-//     if (section.id === "navbar" && src) {
-//       fetch(src)
-//         .then(res => res.text())
-//         .then(data => {
-//           section.innerHTML = data;
-//           section.classList.add("fade-in"); // fade effect
-//         })
-//         .catch(err => {
-//           section.innerHTML = `<p class="text-danger">Failed to load navbar</p>`;
-//           console.error("Navbar load error:", err);
-//         });
-//       return;
-//     }
-
-//     // Lazy load for other sections
-//     const observer = new IntersectionObserver((entries, obs) => {
-//       entries.forEach(entry => {
-//         if (entry.isIntersecting) {
-//           fetch(src)
-//             .then(res => res.text())
-//             .then(data => {
-//               section.innerHTML = data;
-//               section.classList.add("fade-in"); // fade effect
-//               obs.unobserve(section);
-//             })
-//             .catch(err => {
-//               section.innerHTML = `<p class="text-danger">Failed to load section</p>`;
-//               console.error("Section load error:", err);
-//             });
-//         }
-//       });
-//     }, { threshold: 0.2 });
-
-//     observer.observe(section);
-//   });
-// });
 document.addEventListener("DOMContentLoaded", () => {
   const lazySections = document.querySelectorAll(".lazy-section");
 
@@ -57,7 +14,6 @@ document.addEventListener("DOMContentLoaded", () => {
         })
         .catch(err => {
           section.innerHTML = `<p class="text-danger">Failed to load navbar</p>`;
-          console.error("Navbar load error:", err);
         });
       return;
     }
@@ -84,7 +40,6 @@ document.addEventListener("DOMContentLoaded", () => {
             })
             .catch(err => {
               section.innerHTML = `<p class="text-danger">Failed to load section</p>`;
-              console.error("Section load error:", err);
             });
         }
       });
@@ -100,7 +55,6 @@ function initProjectFilter() {
   const cards = document.querySelectorAll("#projectGrid .project");
 
   if (!buttons.length || !cards.length) {
-    console.warn("⚠️ Project filter not initialized: No buttons or cards found.");
     return;
   }
 

@@ -1,10 +1,18 @@
-function toggleExpand(button) {
-  const content = button.nextElementSibling;
-  if (content.style.display === "block") {
-    content.style.display = "none";
-    button.textContent = "Show More";
-  } else {
-    content.style.display = "block";
-    button.textContent = "Show Less";
+document.addEventListener('sectionLoaded', (e) => {
+  if (e.detail === 'work-experience') {
+    const icons = document.querySelectorAll('.fab, .fas');
+    icons.forEach(icon => {
+      // Force re-render if needed
+      icon.classList.add('fa-fw'); // optional fixed width
+    });
+
+    document.querySelectorAll('.expand-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const content = btn.closest('.experience-card').querySelector('.expand-content');
+        content.style.display = content.style.display === 'block' ? 'none' : 'block';
+        btn.querySelector('i').classList.toggle('fa-chevron-down');
+        btn.querySelector('i').classList.toggle('fa-chevron-up');
+      });
+    });
   }
-}
+});
