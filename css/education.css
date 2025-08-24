@@ -41,10 +41,3 @@
   margin-top: 0.3rem;
   color: #555;
 }
-
-.education-icon img {
-  max-width: 50px;            /* adjust size */
-  max-height: 50px;
-  object-fit: contain;        /* prevents distortion */
-  flex-shrink: 0;
-}
