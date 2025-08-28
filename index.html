@@ -9,45 +9,58 @@
 
 
     <meta http-equiv="Content-Security-Policy" content="
-    default-src 'self';
-    script-src 'self' https://www.googletagmanager.com https://www.google-analytics.com https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://unpkg.com;
-    connect-src 'self' https://www.google-analytics.com https://region1.google-analytics.com;
-    img-src 'self' data: https://www.google-analytics.com https://images.unsplash.com;
-    style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://unpkg.com;
-    font-src 'self' https://cdnjs.cloudflare.com data:;
-    frame-src 'self';
-    object-src 'none';
-    base-uri 'self';
-    form-action 'self';
-    ">
+  default-src 'self';
 
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-S16P5WX7XL"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
+  script-src 'self' 
+    'nonce-A1b2C3xYz9Q'
+    https://www.googletagmanager.com 
+    https://www.google-analytics.com 
+    https://cdn.jsdelivr.net 
+    https://cdnjs.cloudflare.com 
+    https://unpkg.com;
 
-        gtag('config', 'G-S16P5WX7XL');
-    </script>
+  style-src 
+    'self' 
+    'unsafe-inline' 
+    https://cdn.jsdelivr.net 
+    https://cdnjs.cloudflare.com 
+    https://unpkg.com;
+
+  img-src 
+    'self' 
+    data: 
+    https://www.google-analytics.com 
+    https://images.unsplash.com;
+
+  font-src 
+    'self' 
+    https://cdn.jsdelivr.net 
+    https://cdnjs.cloudflare.com;
+
+  connect-src 
+    'self' 
+    https://www.google-analytics.com 
+    https://region1.google-analytics.com;
+
+  frame-src 'self';
+  object-src 'none';
+  base-uri 'self';
+  form-action 'self';
+">
 
 
-    <!-- Bootstrap 5 -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
-
-
-    <!-- AOS Animation CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
-
-    <!-- Font Awesome -->
-    <link rel="stylesheet" 
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-        integrity="sha512-papwVHEyciQU3f4on2KwRgXZC+KjkVxZ/+1gMZ9FXXr1p6Ct4cnY70gMZrV3mz6VHfVbqZ8s6BJuOfrU2c1R+g=="
+    <!-- ✅ Font Awesome (correct integrity) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    <!-- Linking the CSS file -->
-    <link rel="stylesheet" href="css/main.css">
+    <!-- ✅ Bootstrap 5 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" />
 
-    <link rel="stylesheet" href="assets/fontsawesome/css/all.min.css">
+    <!-- ✅ AOS Animation CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
+
+    <!-- ✅ Your custom CSS -->
+    <link rel="stylesheet" href="css/main.css" />
 </head>
 
 <body>
@@ -92,6 +105,12 @@
     <button id="backToTop" aria-label="Back to top">↑</button>
 
     <!-- Scripts -->
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-S16P5WX7XL" nonce="A1b2C3xYz9Q"></script>
+    <script src="js/analytics.js" nonce="A1b2C3xYz9Q"></script>
+    <!-- End Google Analytics -->
+
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="js/aos-init.js"></script>
@@ -102,6 +121,7 @@
     <script src="js/achievements.js"></script>
     <script src="js/experience.js"></script>
     <script src="js/stats.js"></script>
+
 </body>
 
 <footer class="site-footer">
